@@ -1,9 +1,20 @@
-void main() {
+import 'dart:io';
 
+void main() {
+  getComando();
 }
 
 String getComando() {
   print("Digite um Comando: 1 - Adicionar nota, 2 - Listar notas, 3 - Sair");
-  List<String> comando =  <String> ["1, 2, 3,"];
-  String? estrada = "";
+  List<String> comandos =  <String> ["1", "2", "3"];
+  String? entrada = "";
+
+  entrada = stdin.readLineSync();
+
+  if (entrada == null || !comandos.contains(entrada)){
+    print("comando invalido");
+    getComando();
+  }
+
+  return entrada!;
 }
