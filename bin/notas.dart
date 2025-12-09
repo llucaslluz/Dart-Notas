@@ -43,7 +43,9 @@ void listaNotas(List<String> notas) {
 } 
 
 void menu (List<String> notas) {
+  print("");
   String comando = getComando();
+  print("");
 
   switch (comando) {
     case "1":
